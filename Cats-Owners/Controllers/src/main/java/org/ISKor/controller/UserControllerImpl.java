@@ -24,11 +24,9 @@ public class UserControllerImpl implements UserController{
     @PostMapping()
     @Override
     public UserDTO createUser(@Valid @RequestBody StartUserDTO userDTO) {
-        // Создаем пользователя через сервис, Kafka сообщение будет отправлено автоматически
         return userService.createUser(userDTO.username(), userDTO.password(), userDTO.roleName(), userDTO.ownerId());
     }
 
-    // Добавление Kafka listener для получения сообщений
     @KafkaListener(topics = "user_created", groupId = "user_group")
     public void listenUserCreated(UserDTO userDTO) {
         System.out.println("Received user created event: " + userDTO);

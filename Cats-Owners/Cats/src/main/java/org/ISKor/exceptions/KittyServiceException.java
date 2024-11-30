@@ -1,6 +1,6 @@
 package org.ISKor.exceptions;
 
-public class KittyServiceException extends  RuntimeException{
+public class KittyServiceException extends RuntimeException{
     private KittyServiceException(String message) {
         super(message);
     }

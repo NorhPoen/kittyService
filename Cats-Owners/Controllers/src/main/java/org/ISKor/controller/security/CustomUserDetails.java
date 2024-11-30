@@ -1,4 +1,4 @@
-package org.ISKor.security;
+package org.ISKor.controller.security;
 
 
 import org.ISKor.entity.Owner;

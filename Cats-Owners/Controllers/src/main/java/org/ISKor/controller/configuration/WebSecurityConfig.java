@@ -1,6 +1,6 @@
 package org.ISKor.controller.configuration;
 
-import org.ISKor.security.UserDetailsServiceImpl;
+import org.ISKor.controller.security.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
